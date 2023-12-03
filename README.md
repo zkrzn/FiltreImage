@@ -11,7 +11,7 @@
 - scipy
 
 ## Link 
-[To Test The application online  : https://filtreimage.streamlit.app/](https://filtreimage.streamlit.app/)
+You can test the application following this link : [https://filtreimage.streamlit.app/](https://filtreimage.streamlit.app/) (Please wake up the application if you find it asleep)
 
 ## Usage
 
