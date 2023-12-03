@@ -15,11 +15,11 @@ You can test the application following this link : [https://filtreimage.streamli
 
 ## Usage
 
-1. Save the script in a file, e.g., `image_filtering_app.py`.
+1. Save the script in a file, e.g., `app.py`.
 2. Run the script using the following command:
 
    ````shell
-   streamlit run image_filtering_app.py
+   streamlit run app.py
    ```
 
 3. The application will start, and you can access it through the provided URL.
