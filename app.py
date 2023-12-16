@@ -126,7 +126,7 @@ def main():
 
         with col3:
             # Application du filtrage médian
-            img_filtree = filtrage_median3(image)
+            img_filtree = filtrage_median3(img_noise)
 
             st.subheader("Filtre Médian 3x3")
             st.image(img_filtree)
@@ -134,13 +134,13 @@ def main():
         
         col4, col5, col6 = st.columns(3)
         with col4:
-            img_filtree = filtrage_median5(image)
+            img_filtree = filtrage_median5(img_noise)
             st.subheader("Médian 5x5")
             st.image(img_filtree)
 
         with col5:
             # Application du filtrage médian
-            img_filtree = filtrage_median7(image)
+            img_filtree = filtrage_median7(img_noise)
 
             st.subheader("Médian 7x7")
             st.image(img_filtree)
