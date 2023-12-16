@@ -117,7 +117,7 @@ def main():
             st.image(img_filtree)
         
         with col6:
-            img_filtree = filtrage_median3(img_noise)
+            img_filtree = filtrage_median11(img_noise)
             st.subheader("filtre 11x11")
             st.image(img_filtree)
 
