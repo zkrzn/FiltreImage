@@ -47,7 +47,7 @@ def filtrage_median5(image):
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
 
-    # Appliquer le filtrage médian avec une taille de fenêtre de 3x3
+    # Appliquer le filtrage médian avec une taille de fenêtre de 5x5
     img_filtree = ndimage.median_filter(img_array, size=5)
 
     return img_filtree
@@ -56,7 +56,7 @@ def filtrage_median7(image):
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
 
-    # Appliquer le filtrage médian avec une taille de fenêtre de 3x3
+    # Appliquer le filtrage médian avec une taille de fenêtre de 7x7
     img_filtree = ndimage.median_filter(img_array, size=7)
 
     return img_filtree
@@ -65,7 +65,7 @@ def filtrage_median11(image):
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
 
-    # Appliquer le filtrage médian avec une taille de fenêtre de 3x3
+    # Appliquer le filtrage médian avec une taille de fenêtre de 11x11
     img_filtree = ndimage.median_filter(img_array, size=11)
 
     return img_filtree
@@ -91,8 +91,8 @@ def main():
 
         with col2:
             # application de noise poisson
-            img_noise = add_noise(image, noise_type="poisson")
-            st.subheader("Bruit poisson")
+            img_noise = add_noise(image, noise_type="gaussian")
+            st.subheader("Bruit gaussian")
             st.image(img_noise)
 
         with col3:
