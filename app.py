@@ -3,6 +3,13 @@ import streamlit as st
 from PIL import Image
 from scipy import ndimage
 
+# Ajouter un titre pour cette application streamlit et des metadonnées
+st.set_page_config(page_title="Application de filtrage médian",
+                   page_icon="🧊",
+                   layout="wide",
+                   initial_sidebar_state="expanded")
+
+
 def add_noise(image, noise_type="gaussian", noise_level=0.1):
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
