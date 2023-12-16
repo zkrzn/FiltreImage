@@ -17,6 +17,17 @@ st.set_page_config(page_title="Application de filtrage médian",
 
 
 def add_noise(image, noise_type="gaussian", noise_level=0.1):
+    """
+    La fonction `add_noise` prend une image en entrée et lui ajoute différents types de bruit, tels que le bruit gaussien, le bruit sel et poivre, le bruit de Poisson ou le bruit speckle, avec un niveau de bruit spécifié.
+
+    :param image: L'image d'entrée à laquelle vous souhaitez ajouter du bruit. Elle peut être dans n'importe quel format pouvant être converti en un tableau numpy, tel qu'une image PIL ou un tableau numpy lui-même.
+    
+    :param noise_type: Le paramètre "noise_type" spécifie le type de bruit à ajouter à l'image. Il peut prendre l'une des valeurs suivantes:, par défaut gaussien (facultatif).
+    
+    :param noise_level: Le paramètre noise_level détermine l'intensité du bruit à ajouter à l'image. Une valeur de noise_level plus élevée entraînera un effet de bruit plus visible et intense, tandis qu'une valeur plus faible donnera un effet de bruit moins visible et subtil.
+    
+    :return: l'image avec le bruit ajouté.
+    """
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
     # Ajouter du bruit
