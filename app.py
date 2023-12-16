@@ -6,7 +6,7 @@ from scipy import ndimage
 # Ajouter un titre pour cette application streamlit et des metadonnées
 st.set_page_config(page_title="Application de filtrage médian",
                    page_icon="🧊",
-                   layout="wide",
+                   layout="narrow",
                    initial_sidebar_state="expanded")
 
 
