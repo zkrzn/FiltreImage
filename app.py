@@ -9,9 +9,9 @@ st.set_page_config(page_title="Application de filtrage médian",
                    layout="centered",
                    initial_sidebar_state="collapsed",
                    menu_items={
-                            'Get Help': 'https://www.github.io/zkrzn',
+                            'Get Help': 'https://github.com/zkrzn',
                             'Report a bug': "mailto:izouaouen.zakaria@gmail.com",
-                            'About': "# This application is maintained by Zakaria IZOUAOUEN. It is used to apply median filter on images. \n\n"
+                            'About': "This app is maintained by Zakaria IZOUAOUEN. It is used to apply median filter on images. \n\n"
     }
                    )
 
