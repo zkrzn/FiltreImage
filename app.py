@@ -6,7 +6,14 @@ from scipy import ndimage
 # Ajouter un titre pour cette application streamlit et des metadonnées
 st.set_page_config(page_title="Application de filtrage médian",
                    page_icon="🧊",
-                   initial_sidebar_state="expanded")
+                   layout="centered",
+                   initial_sidebar_state="collapsed",
+                   menu_items={
+                            'Get Help': 'https://www.github.io/zkrzn',
+                            'Report a bug': "mailto:izouaouen.zakaria@gmail.com",
+                            'About': "# This application is maintained by Zakaria IZOUAOUEN. It is used to apply median filter on images. \n\n"
+    }
+                   )
 
 
 def add_noise(image, noise_type="gaussian", noise_level=0.1):
