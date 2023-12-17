@@ -1,3 +1,4 @@
+# The code is importing necessary libraries for the application:
 import numpy as np
 import streamlit as st
 from PIL import Image
@@ -62,40 +63,19 @@ def add_noise(image, noise_type="gaussian", noise_level=0.1):
 
     return img_noise
 
-
-def filtrage_median3(image):
+def filtrage_median(image, size):
+    """
+    The function `filtrage_median` applies a median filter with a window size to an input image.
+    
+    :param image: The parameter "image" is the input image that you want to apply the median filtering
+    to. It can be a grayscale image or a color image
+    :return: the filtered image as a numpy array.
+    """
     # Convertir l'image en tableau numpy
     img_array = np.array(image)
 
-    # Appliquer le filtrage médian avec une taille de fenêtre de 3x3
-    img_filtree = ndimage.median_filter(img_array, size=3)
-
-    return img_filtree
-
-def filtrage_median5(image):
-    # Convertir l'image en tableau numpy
-    img_array = np.array(image)
-
-    # Appliquer le filtrage médian avec une taille de fenêtre de 5x5
-    img_filtree = ndimage.median_filter(img_array, size=5)
-
-    return img_filtree
-
-def filtrage_median7(image):
-    # Convertir l'image en tableau numpy
-    img_array = np.array(image)
-
-    # Appliquer le filtrage médian avec une taille de fenêtre de 7x7
-    img_filtree = ndimage.median_filter(img_array, size=7)
-
-    return img_filtree
-
-def filtrage_median11(image):
-    # Convertir l'image en tableau numpy
-    img_array = np.array(image)
-
-    # Appliquer le filtrage médian avec une taille de fenêtre de 11x11
-    img_filtree = ndimage.median_filter(img_array, size=11)
+    # Appliquer le filtrage médian avec une taille de fenêtre donnée
+    img_filtree = ndimage.median_filter(img_array, size=size)
 
     return img_filtree
 
@@ -126,7 +106,7 @@ def main():
 
         with col3:
             # Application du filtrage médian
-            img_filtree = filtrage_median3(img_noise)
+            img_filtree = filtrage_median(img_noise, 3)
 
             st.subheader("Filtre Médian 3x3")
             st.image(img_filtree)
@@ -134,19 +114,19 @@ def main():
         
         col4, col5, col6 = st.columns(3)
         with col4:
-            img_filtree = filtrage_median5(img_noise)
+            img_filtree = filtrage_median(img_noise, 5)
             st.subheader("Médian 5x5")
             st.image(img_filtree)
 
         with col5:
             # Application du filtrage médian
-            img_filtree = filtrage_median7(img_noise)
+            img_filtree = filtrage_median(img_noise, 7)
 
             st.subheader("Médian 7x7")
             st.image(img_filtree)
         
         with col6:
-            img_filtree = filtrage_median11(img_noise)
+            img_filtree = filtrage_median(img_noise, 11)
             st.subheader("Médian 11x11")
             st.image(img_filtree)
 
